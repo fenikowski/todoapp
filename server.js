@@ -28,11 +28,11 @@ client.connect(err => {
     tasksInfo = db.collection("tasksInfo");
     tasksInfo.findOne({ info: "tasksCompleted" }, (err, data) => {
       completedTasks = data.number;
-    });
 
-    tasks.find({}).toArray((err, data) => {
-      data = data;
-      res.json({ data, completedTasks });
+      tasks.find({}).toArray((err, data) => {
+        data = data;
+        res.json({ data, completedTasks });
+      });
     });
   });
 
@@ -69,7 +69,9 @@ client.connect(err => {
     const { name, importance } = req.params;
 
     const date = new Date();
-    const time = `${date.getDate()}.${date.getMonth()} ${date.getHours()}:${date.getMinutes()}`;
+    const time = `${date.getDate()}.${date.getMonth()} ${date.getHours()}:${
+      date.getMinutes() > 10 ? date.getMinutes() : "0" + date.getMinutes()
+    }`;
 
     tasks.insertOne({ time, name, importance }, err => {
       if (err) console.log("Cannot add to database!");

@@ -19,7 +19,10 @@ function sendTask(e) {
     method: "POST"
   })
     .then(data => data.json())
-    .then(data => createTasks(data));
+    .then(data => {
+      createTasks(data);
+      document.querySelector("div#active-tasks span").innerText = data.length;
+    });
 }
 
 function createTasks(data) {
@@ -67,7 +70,10 @@ function handleDelete(e) {
     method: "POST"
   })
     .then(data => data.json())
-    .then(data => createTasks(data));
+    .then(data => {
+      createTasks(data);
+      document.querySelector("div#active-tasks span").innerText = data.length;
+    });
 }
 
 function handleComplete(e) {
@@ -80,6 +86,9 @@ function handleComplete(e) {
 
       document.querySelector("div#completed-tasks span").innerText =
         data.completedTasks;
+
+      document.querySelector("div#active-tasks span").innerText =
+        data.data.length;
     });
 }
 
@@ -93,6 +102,8 @@ function inicialization() {
 
       document.querySelector("div#completed-tasks span").innerText =
         data.completedTasks;
+      document.querySelector("div#active-tasks span").innerText =
+        data.data.length;
     });
 }
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap&subset=latin-ext");
 
 * {
   margin: 0;
@@ -12,9 +12,9 @@ body {
 h1 {
   display: block;
   text-align: center;
-  font-family: sans-serif;
-  padding: 5vh;
-  text-shadow: 2px 2px grey;
+  font-family: Ubuntu;
+  padding: 3.5vh;
+  color: whitesmoke;
 }
 
 div#board {
@@ -47,7 +47,7 @@ form {
   align-items: center;
   justify-content: space-around;
 
-  font-family: sans-serif;
+  font-family: Ubuntu;
 }
 
 input#name {
@@ -91,7 +91,7 @@ div#labels {
 
 div#labels div {
   text-align: center;
-  font-family: Roboto;
+  font-family: Ubuntu;
   font-weight: 900;
   padding: 5px 0 5px;
 }
@@ -129,7 +129,7 @@ div.task {
 div.task div {
   text-align: center;
   color: white;
-  font-family: "Roboto";
+  font-family: Ubuntu;
   font-weight: 500;
   margin: center auto;
   padding: 10px 0 10px;
@@ -183,13 +183,18 @@ div#footer {
   position: relative;
 }
 
-div#footer div {
+div#tasks-counters {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   color: white;
-  font-family: sans-serif;
+  font-family: Ubuntu;
   font-size: 2.5vh;
+}
+
+div#tasks-counters div {
+  display: inline-block;
+  margin: 0 5vw;
 }
