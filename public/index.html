@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ToDoList</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1>ToDoList</h1>
+    <div id="board">
+      <div id="header">
+        <form action="">
+          <input id="name" type="text" placeholder="type task name" />
+          <label
+            >Mark as important: <input id="checkbox" type="checkbox"
+          /></label>
+          <button id="send">Add <i class="fas fa-paper-plane"></i></button>
+        </form>
+        <div id="labels">
+          <div class="date">Date</div>
+          <div class="title">Task</div>
+          <div class="importance">Important</div>
+          <div class="buttons">Manage</div>
+        </div>
+      </div>
+      <div id="task-list"></div>
+      <div class="" id="aside"></div>
+      <div id="footer">
+        <div id="completed-tasks">Completed tasks: <span>0</span></div>
+      </div>
+    </div>
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>
