@@ -12,9 +12,7 @@ const client = new mongo.MongoClient(
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(3001, () => {
-  console.log("Server is listening at http://localhost:3001");
-});
+app.listen(process.env.PORT || 5000);
 
 client.connect(err => {
   if (err) console.log("Connection failed");
