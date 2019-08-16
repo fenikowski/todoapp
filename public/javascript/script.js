@@ -40,10 +40,10 @@ function createTasks(data) {
     const taskButtons = document.createElement("div");
     taskButtons.className = "task-buttons";
     const deleteButton = document.createElement("i");
-    deleteButton.className = "fas fa-check";
+    deleteButton.className = "fas fa-trash-alt";
     deleteButton.dataset.id = info._id;
     const completeButton = document.createElement("i");
-    completeButton.className = "fas fa-trash-alt";
+    completeButton.className = "fas fa-check";
     completeButton.dataset.id = info._id;
 
     document.querySelector("div#task-list").appendChild(task);
@@ -51,8 +51,8 @@ function createTasks(data) {
     task.appendChild(taskTitle);
     task.appendChild(taskImportance);
     task.appendChild(taskButtons);
-    taskButtons.appendChild(deleteButton);
     taskButtons.appendChild(completeButton);
+    taskButtons.appendChild(deleteButton);
     deleteButton.addEventListener("click", handleDelete);
     completeButton.addEventListener("click", handleComplete);
 
